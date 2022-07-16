@@ -1,0 +1,185 @@
+.icono{
+
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    margin-right: 50%;
+    width: max-content;
+}
+
+.textosuperior {
+    background-color: rgb(117, 216, 195);
+    border: 5px dashed rgb(117, 216, 195);
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #6d6c6c;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: smaller;
+}
+
+.columnas{
+
+    columns: 2;
+    align-content: center;
+    column-gap:5px;
+    column-rule:2px;
+    color: #6d6c6c;
+    text-align: right;
+ }
+
+.valores{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #6d6c6c;
+}
+
+h4 {
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: rgb(95, 95, 95);
+    font-size: large;
+}
+
+h6 {
+    font-style: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: rgb(95, 95, 95);
+    font-size:35px;
+    margin: 5%;
+
+}
+
+h2 {
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: smaller;
+    color: rgb(95, 95, 95);
+}
+
+  
+.card {
+
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+
+    width: 70%;
+}
+
+a {
+
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    margin-top: 5%; 
+}
+
+.button1 {
+    background-color: rgb(117, 216, 195);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 90%;
+}
+
+.button {
+    background-color: rgb(117, 216, 195);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 70%;
+}
+
+/* Footer */
+
+section {
+    margin-top: 5%;
+    padding: 60px 0;
+
+}
+
+section .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+    background-color:  rgba(214, 214, 214, 0.849) !important;
+}
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #6d6c6c;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#6d6c6c;
+}
+#footer a {
+    color: #6d6c6c;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+	margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#6d6c6c;
+}
+#footer ul.social li a:hover{
+	color:#6d6c6c;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}

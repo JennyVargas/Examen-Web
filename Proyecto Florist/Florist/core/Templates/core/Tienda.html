@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    
+    {% load static %}
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'Core/Css/estilos.css' %}">
+    <title>florist</title>
+    <link rel="icon" type="image/png" href="{% static 'Core/Img/Logo.png' %}">
+  </head>
+  <body>
+    <div class="textosuperior" >Bienvenido a florist, dedicados a la venta de planta y a la fabricacion de maceteros Telefono+56225013510 – Whatsapp +56963389763</div>
+
+<!--Inicio de barra de navegacion-->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:  rgba(214, 214, 214, 0.849);">
+  <img src="{% static 'Core/Img/Logo.png' %}" alt="20" width="55" style="margin-left: 6%;">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto" style="margin-left: 70%;">
+      <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:8000/">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{%url 'registro1'%}">Registrate</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Tienda">Tienda</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Registro">Registro</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/carrito">Carrito</a>
+      </li>
+    </ul>
+    <div class="icono">
+      <a title="icono" href="{%url 'login'%}"><img src="{% static 'Core/Img/usuario.png' %}" alt="icono" /></a>
+    </div>
+  </div>
+</nav>
+<!--Fin de barra de navegacion-->
+
+
+<h6>Productos Disponibles</h6>
+
+<!--Inicio Producto-->
+<!--<div class="container">
+    <div class="row">
+    </div>
+    <div class="row">
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2">
+      <div class="col mb-4">
+        <div class="card">
+          <img src="{% static 'Core/Img/maderaproducto.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Macetero Madera</h5>
+            <h5 class="card-title">$25000</h5>
+            <p class="card-text">Madera de Roble</p>
+            <p class="card-text">Stock: 6</p>
+            <p class="card-text">SKU: 77890</p>
+            <p class="card-text">Categoría: Maceteros</p>
+            <a class="btn btn-outline-success my-2 my-sm-0" href="#" role="button">COMPRAR</a>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card">
+          <img src="{% static 'Core/Img/girasolproducto.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Girasol</h5>
+            <h5 class="card-title">$6000</h5>
+            <p class="card-text">Planta herbacea</p>
+            <p class="card-text">Stock: 24</p>
+            <p class="card-text">SKU: 12234</p>
+            <p class="card-text">Categoría:	Plantas</p>
+            <a class="btn btn-outline-success my-2 my-sm-0" href="Malus spectabilis.html" role="button">COMPRAR</a>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card">
+          <img src="{% static 'Core/Img/tierradehojaproducto.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Tierra de Hoja</h5>
+            <h5 class="card-title">$10000</h5>
+            <p class="card-text">Tierra de boldo</p>
+            <p class="card-text">Stock:	40</p>
+            <p class="card-text">SKU: 3456</p>
+            <p class="card-text">Categoría:	Abono</p>
+            <a class="btn btn-outline-success my-2 my-sm-0" href="Girasol.html" role="button">COMPRAR</a>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card">
+          <img src="{% static 'Core/Img/ceramicaproducto.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Macetero Ceramico</h5>
+            <h5 class="card-title">$30000</h5>
+            <p class="card-text">Ceramico Texturizado</p>
+            <p class="card-text">Stock:	10</p>
+            <p class="card-text">SKU: 442424</p>
+            <p class="card-text">Categoría:	Maceteros</p>
+            <a class="btn btn-outline-success my-2 my-sm-0" href="Rudbeckia hirta.html" role="button">COMPRAR</a>
+          </div>
+        </div>
+    </div>
+</div>-->
+
+<!--fin Producto-->
+
+<div class = "row">
+  {% for Producto in productos %}
+    <div class = "col-6">
+      <div class = "card" style="height: 10rem; width: 23rem; margin: 5px 0px;">
+        <div class = "card-body">
+          <h5 class="card-tittle">{{Producto.Nombre}}</h5>
+          <p class="card-text">{{Producto.Descripcion}}</p>
+          <p class="card-text">{{Producto.Precio}}</p>
+          <a href="#" class="btn btn-primary">Agregar al carro</a>
+        </div>
+      </div>
+    </div>
+   {% endfor %}
+</div>
+<div class = "cold-4">
+
+</div> 
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="/Tienda" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="/Tienda">1</a></li>
+      <li class="page-item"><a class="page-link" href="/Tienda2">2</a></li>
+      <li class="page-item">
+        <a class="page-link" href="/Tienda2" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Next</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+</div>
+
+
+
+<!-- Footer -->
+<section id="footer">
+  <div class="container">
+    <div class="row text-center text-xs-center text-sm-left text-md-left">
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <h5>Suscríbete</h5>
+        <ul class="list-unstyled quick-links" >
+          <li>
+            <h1>regístrate gratis para obtener las mejores recomendaciones del fundador de Florist 
+              y los últimos lanzamientos y ofertas, te esperamos…
+            </h1>
+            <a class="btn btn-primary" href="{% url 'registro1' %}" role="button">Suscribete</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <h5>Redes Sociales</h5>
+        <a href="https://es-la.facebook.com/" class="href">
+          <img src="{% static 'Core/Img/facebook.png' %}" alt="">
+        </a>
+        <a href="https://web.whatsapp.com/" class="href">
+          <img src="{% static 'Core/Img/whatsapp.png' %}" alt="">
+        </a>
+        <a href="https://www.instagram.com/" class="href">
+          <img src="{% static 'Core/Img/instagram.png' %}" alt="">
+        </a>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        <h5>Arte Cultivos</h5>
+        <ul class="list-unstyled quick-links">
+          <li>
+            <h1>Nos destacamos por los maceteros y venta de plantas de huertos, interior y exterior. 
+              Tierras de diversos tipos y lo mejor de todo, cuando te suscribes a nuestro newsletter 
+              recibirás a través del tiempo recomendaciones e instrucciones para cuidar tu planta de mejor manera. 
+              Nuestra Misión es Hacer de tu Vida un Gran Jardín!!!
+            </h1>
+          </li>
+        </ul>
+      </div>
+    </div>
+      <hr>
+    </div>	
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+        <p class="h6">Copyright © 2022 Florist.</p>
+      </div>
+      <hr>
+    </div>	
+  </div>
+</section>
+<!-- ./Footer -->
+
+
+
+
+
+
+
+
+
+
+   <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
